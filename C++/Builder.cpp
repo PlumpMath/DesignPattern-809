@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstring>
+
 using namespace std;
 
 /* Builders */
@@ -46,12 +48,12 @@ int main(int argc, char* argv[])
   Builder * builder;
   if (argc < 2 || (argc >= 2 && !strcmp(argv[1], "A")))
   {
-    builder = new StyleABuilder();
+    builder = new StyleABuilder;
     cout << "StyleABuilder built" << endl;
   }
   else
   {
-    builder = new StyleBBuilder();
+    builder = new StyleBBuilder;
     cout << "StyleBBuilder built" << endl;
   }
   Director director(builder);

@@ -1,5 +1,5 @@
 #include <iostream>
-#include <string>
+#include <cstring>
 
 using namespace std;
 
@@ -44,15 +44,15 @@ class AbstractFactory
 class ConcreteFactory1 : public AbstractFactory
 {
   public:
-    ProductA1 * createProductA() { return new ProductA1(); }
-    ProductB1 * createProductB() { return new ProductB1(); }
+    ProductA1 * createProductA() { return new ProductA1; }
+    ProductB1 * createProductB() { return new ProductB1; }
 };
 
 class ConcreteFactory2 : public AbstractFactory
 {
   public:
-    ProductA2 * createProductA() { return new ProductA2(); }
-    ProductB2 * createProductB() { return new ProductB2(); }
+    ProductA2 * createProductA() { return new ProductA2; }
+    ProductB2 * createProductB() { return new ProductB2; }
 };
 
 /* Main Entrance */
@@ -62,12 +62,12 @@ int main(int argc, char* argv[])
   if (argc < 2 || (argc >= 2 && !strcmp(argv[1], "1")))
   {
     cout << "ConcreteFactory1 built" << endl;
-    factory = new ConcreteFactory1();
+    factory = new ConcreteFactory1;
   }
   else
   {
     cout << "ConcreteFactory2 built" << endl;
-    factory = new ConcreteFactory2();
+    factory = new ConcreteFactory2;
   }
   ProductA * a = factory->createProductA();
   ProductB * b = factory->createProductB();
