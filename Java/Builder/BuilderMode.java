@@ -8,7 +8,7 @@ class Builder {
 class StyleABuilder extends Builder {
     public void buildPart1() { System.out.println("Part1 built in StyleA"); }
     public void buildPart2() { System.out.println("Part2 built in StyleA"); }
-};
+}
 
 class StyleBBuilder extends Builder {
     public void buildPart1() { System.out.println("Part1 built in StyleB"); }

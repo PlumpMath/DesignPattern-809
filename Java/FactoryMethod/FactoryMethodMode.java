@@ -4,12 +4,12 @@ class Product
   protected String type;
   public Product() { type = "default"; }
   public String getType() { return type; }
-};
+}
 
 class ConcreteProduct extends Product
 {
   public ConcreteProduct() { type = "concrete"; }
-};
+}
 
 
 /* Creators */
@@ -22,12 +22,12 @@ class Creator
       Product p = factoryMethod();
       System.out.println("using " + p.getType() + " product for the operation");
   }
-};
+}
 
 class ConcreteCreator extends Creator
 {
    public ConcreteProduct factoryMethod() { return new ConcreteProduct(); }
-};
+}
 
 
 /* Main Entrance */
